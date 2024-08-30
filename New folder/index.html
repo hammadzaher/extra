@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hammad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>HAMMAD MINI CALCULATOR</h2>
+    <div class="one">
+    <p>Total marks of math</p>
+    <input type="number" id="input1">
+    </div>
+    <div class="two">
+    <p>Obtained marks of math</p>
+    <input type="number" id="input2">
+    </div>
+    <div class="three">
+    <p>Total marks of physics</p>
+    <input type="number" id="input3">
+    </div>
+    <div class="four">
+    <p>Obtained marks of physics</p>
+    <input type="number"  id="input4">
+    </div>
+    <div class="five">
+    <p>Total marks ofchemistry</p>
+    <input type="number" id="input5">
+    </div>
+    <div class="six">
+    <p>Obtained marks of chemistry</p>
+    <input type="number" id="input6">
+    </div>
+    <div class="button">
+    <button onclick="sumbit()">click me</button>
+</div>
+    <div class="result"></div>
+</div>
+
+    
+    <script>
+        function sumbit(){
+            let input1 = document.querySelector("#input1").value;
+            let input2 = document.querySelector("#input2").value;
+            let input3 = document.querySelector("#input3").value;
+            let input4 = document.querySelector("#input4").value;
+            let input5 = document.querySelector("#input5").value;
+            let input6 = document.querySelector("#input6").value;
+
+            let totalmarks = Number(input1) + Number(input3) + Number(input5);
+            let obtainedmarks = Number(input2) + Number(input4) + Number(input6);
+
+            let totalpercentage = (obtainedmarks / totalmarks) * 100;
+            document.querySelector(".result").innerText = totalpercentage 
+        }
+    </script>
+</body>
+</html>
